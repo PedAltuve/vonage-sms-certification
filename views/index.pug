@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    h1 Welcome to #{brand}!
+    if number
+        p You are logged in as #{role} using number: #{number}
+        if role === "passenger"
+            form(action='/chat', method='post')
+                input(type="hidden", name="user", value=number)
+                button.ghost-button(type="submit") Request driver
+        a(href="logout")
+            button.ghost-button(type="button") Logout
+    else
+        p Please log in to continue
+        a(href="login")
+            button.ghost-button(type="button") Login

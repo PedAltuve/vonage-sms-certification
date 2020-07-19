@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    h1 Log in: Step 2
+    fieldset
+        form(action='/check-code', method='post')
+            input.ghost-input(name='code', type='text', placeholder='Enter your verification code', required='')
+            select(name="role")
+              option(value="driver") Driver
+              option(value="passenger") Passenger
+            input.ghost-button(type='submit', value='Verify me!')
