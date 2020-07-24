@@ -12,3 +12,5 @@ VIRTUAL_NUMBER
 Then, run `npm install`
 
 After the installation has been completed, use `npm start` and the server will be running in port 3000
+
+**Remember to update your inbound messages webhook in the vonage dashboard**
